@@ -1,0 +1,22 @@
+# depslib dependency file v1.0
+1522762341 source:d:\curso\7° semestre\estrutura de dados ii\codes\c++\arvorebinaria\arvbin.cpp
+	<stdio.h>
+	<stdlib.h>
+	<queue>
+	"arvbin.h"
+
+1522762029 d:\curso\7° semestre\estrutura de dados ii\codes\c++\arvorebinaria\arvbin.h
+
+1522762073 source:d:\curso\7° semestre\estrutura de dados ii\codes\c++\arvorebinaria\main.cpp
+	<stdio.h>
+	<stdlib.h>
+	<iostream>
+	<queue>
+	"arvbin.h"
+
+1522762584 source:d:\curso\7° semestre\estrutura de dados ii\codes\c++\arvorebinaria\busca_largura.cpp
+	<stdio.h>
+	<stdlib.h>
+	<queue>
+	"arvbin.h"
+
