@@ -51,4 +51,25 @@ void iter_preordem(Arv_bin* arv){
 }
 void iter_postordem(Arv_bin* arv){
     system("cls");
+    stack<Nodo *> pilha;
+    stack<Nodo *> alpha;
+
+    Nodo* corr = NULL;
+    pilha.push(arv->raiz);
+
+    while(!pilha.empty()){
+        corr = pilha.top();
+        alpha.push(corr);
+        pilha.pop();
+
+        if(corr->esq != NULL)
+            pilha.push(corr->esq);
+        if(corr->dir != NULL)
+            pilha.push(corr->dir);
+    }
+
+    while(!alpha.empty()){
+        printf("%c ", alpha.top()->info);
+        alpha.pop();
+    }
 }
