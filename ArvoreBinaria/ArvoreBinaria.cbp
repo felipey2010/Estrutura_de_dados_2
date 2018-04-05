@@ -32,6 +32,9 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="arvbin.cpp" />
+		<Unit filename="arvbin.h" />
+		<Unit filename="busca_largura.cpp" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion />

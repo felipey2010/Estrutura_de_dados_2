@@ -21,7 +21,7 @@ int main(){
                             );
     while(1){ //Menu
         limp_tela();
-        printf("1-Imprimir Arvore\n2-Pertence a Arvore\n3-Altura\n4-Buscar No\n5-Tamanho da arvore\n6-Espelhar Arvore\n7-Percorre em Largura\n0-Sair\nDigite__");
+        printf("1-Imprimir Arvore\n2-Pertence a Arvore\n3-Altura\n4-Buscar No\n5-Tamanho da arvore\n6-Espelhar Arvore\n7-Percorre em Largura\n8-Opcao Iterativa\n0-Sair\nDigite__");
         scanf("%d", &op);
 
         if(op == 1){ //Opcao para imprimir arvore em ordem
@@ -101,6 +101,23 @@ int main(){
 
             printf("\n");
             system("pause");
+        }
+        if(op == 8){ //Opcao para imprimir arvore em ordem usando iteratividade
+            limp_tela();
+            while(1){
+                printf("\n**************ESCOLHE A ORDEM PARA IMPRIMIR A ARVORE**************\n1-preordem iterativa\n2-inordem iterativa\n3-postordem iterativa\n0-Sair\nDigite:__");
+                scanf("%d", &esc);
+                if(esc == 0) //breakpoint quando esc for zero
+                    break;
+                else if(esc == 1)
+                    iter_preordem(arv);
+                else if(esc == 2)
+                    iter_inorderm(arv);
+                else if(esc == 3)
+                    iter_postordem(arv);
+                else
+                    printf("ESCOLHA INVALIDA!");
+            }
         }
         else if(op == 0)
             break;

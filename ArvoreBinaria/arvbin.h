@@ -49,4 +49,9 @@ Arv_bin* espelho(Arv_bin* arv);
 //Percurso em Largura
 void BFS(Arv_bin* arv);
 
+//Impressao da arvore pelo metodo iterativo
+void iter_inorderm(Arv_bin* arv);
+void iter_preordem(Arv_bin* arv);
+void iter_postordem(Arv_bin* arv);
+
 
