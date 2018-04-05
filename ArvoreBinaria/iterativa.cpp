@@ -10,28 +10,26 @@ void iter_inorderm(Arv_bin* arv){
     //Incompleto
     system("cls"); //Limpar a tela
     stack<Nodo *> pilha;
+    int aux = 0; //Ponto de controle
+    Nodo* corr = arv->raiz;
 
-    Nodo* ar = NULL;
-
-    pilha.push(arv->raiz);
-
-    while(!pilha.empty()){
-        ar = pilha.top();
-
-        if(ar->esq != NULL){
-            if(ar->dir != NULL)
-                pilha.push(ar->dir);
-
-            pilha.push(ar->esq);
+    while(corr != NULL || aux > 0){
+        if(corr != NULL){
+            pilha.push(corr);
+            corr = corr->esq;
+            aux++;
         }
         else{
-            printf("%c ", ar->info);
+            aux--;
+            corr = pilha.top();
+
+            printf("%c ", corr->info);
             pilha.pop();
-            if(ar->dir != NULL)
-                pilha.push(ar->dir);
+            corr = corr->dir;
         }
     }
 }
+
 void iter_preordem(Arv_bin* arv){
     system("cls");
     stack<Nodo *> pilha;
