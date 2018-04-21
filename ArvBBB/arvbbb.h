@@ -24,3 +24,11 @@ void arv_libera(Nodo* nodo);
 int teste_arvore(Nodo* no);
 
 int eh_completa(Nodo* no);
+
+int compare_no(Nodo* pri_arv, Nodo* seg_arv);
+
+int compare_arv(Nodo* pri_arv, Nodo* seg_arv);
+
+int maior_valor(Nodo* no);
+
+int menor_valor(Nodo* no);

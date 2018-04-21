@@ -136,3 +136,50 @@ int eh_completa(Nodo* no){
     return(eh_completa(no->esq) && eh_completa(no->dir));
 }
 
+int compare_no(Nodo* pri_no, Nodo* seg_no){
+    if (pri_no->dado == seg_no->dado)
+        return 1;
+    else
+        return 0;
+}
+
+int compare_arv(Nodo* pri_arv, Nodo* seg_arv){
+    while(seg_arv != NULL){
+        if(compare_no(pri_arv, seg_arv)){
+            compare_arv(pri_arv->esq, seg_arv->esq);
+            compare_arv(pri_arv->dir,seg_arv->dir);
+            return 1;
+        }
+        else
+            return 0;
+    }
+    return 0;
+}
+int maior_valor(Nodo* no){
+    if(no == NULL)
+        return 0;
+
+    Nodo* temp;
+    int aux = 0;
+    temp = no->dir;
+    while(temp != NULL){
+        aux = temp->dado;
+        temp = temp->dir;
+    }
+    return aux;
+}
+
+int maior_valor(Nodo* no){
+    if(no == NULL)
+        return 0;
+
+    Nodo* temp;
+    int aux = 0;
+    temp = no->esq;
+    while(temp != NULL){
+        aux = temp->dado;
+        temp = temp->esq;
+    }
+    return aux;
+}
+
