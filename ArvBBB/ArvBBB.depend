@@ -1,13 +1,14 @@
 # depslib dependency file v1.0
-1523406188 source:d:\curso\7° semestre\estrutura de dados ii\codes\arvbbb\main.c
+1524276373 source:d:\curso\7° semestre\estrutura de dados ii\codes\arvbbb\main.c
 	<stdio.h>
 	<stdlib.h>
 	"arvbbb.h"
 
-1523420152 d:\curso\7° semestre\estrutura de dados ii\codes\arvbbb\arvbbb.h
+1524276585 d:\curso\7° semestre\estrutura de dados ii\codes\arvbbb\arvbbb.h
 
-1523420152 source:d:\curso\7° semestre\estrutura de dados ii\codes\arvbbb\arvbbb.c
+1524276584 source:d:\curso\7° semestre\estrutura de dados ii\codes\arvbbb\arvbbb.c
 	<stdio.h>
 	<stdlib.h>
+	<limits.h>
 	"arvbbb.h"
 

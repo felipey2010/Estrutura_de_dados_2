@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <limits.h>
 #include "arvbbb.h"
 
 Nodo* cria(){
@@ -60,6 +61,8 @@ void insere(Nodo* raiz, Nodo* temp){
             else
                 raiz->esq = temp;
         }
+        if(temp->dado == raiz->dado)
+            printf("\nValor ja existe!\n");
     }
 }
 //Remove um no da arvore
@@ -105,5 +108,31 @@ void arv_libera(Nodo* nodo){
     arv_libera(nodo->dir);
     free(nodo);
     nodo = NULL;
+}
+
+/* TO-DO
+ *Criar INT_MAX e INT_MIN
+*/
+int teste_arvore(Nodo* no){
+    if(no == NULL)
+        return 1;
+    else if(no->esq != NULL && no->esq->dado > no->dado)
+        return 0;
+    else if(no->dir != NULL && no->dir->dado < no->dado)
+        return 0;
+    else if(!teste_arvore(no->esq) || !teste_arvore(no->dir))
+        return 0;
+    else
+        return 1;
+}
+//Testar se arvore eh completa ou nao
+int eh_completa(Nodo* no){
+    if(no != NULL && no->esq != NULL && no->dir != NULL){
+        return 1;
+    }
+    else
+        return 0;
+
+    return(eh_completa(no->esq) && eh_completa(no->dir));
 }
 

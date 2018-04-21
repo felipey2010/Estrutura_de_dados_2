@@ -20,3 +20,7 @@ Nodo* remove_arvbbb(Nodo* no, int v);
 
 //Liberar a arvore
 void arv_libera(Nodo* nodo);
+
+int teste_arvore(Nodo* no);
+
+int eh_completa(Nodo* no);

@@ -13,7 +13,7 @@ int main(){
     while(1){
         limpa_tela();
         printf("*********************MENU*********************\n");
-        printf("1 - Inserir na arvore\n2 - Imprimir Arvore\n0 - Sair\nDigite uma opcao: ");
+        printf("1 - Inserir na arvore\n2 - Imprimir Arvore\n3 - Remover um valor\n4 - Teste de Arvore BBB\n5 - Maior Valor Na Arvore\n6 - Eh Arvore Completa?\n0 - Sair\nDigite uma opcao: ");
         scanf("%d", &op);
         limpa_tela();
 
@@ -27,7 +27,7 @@ int main(){
             int i = 0;
             while(i != aux){
                 limpa_tela();
-                printf("Digite o %dº valor: ", (i+1));
+                printf("Digite o -%d- valor: ", (i+1));
                 temp = cria();
                 //Pela primeira vez, insere pois a arvore estara vazia
                 if(arv == NULL)
@@ -43,9 +43,30 @@ int main(){
             else{
                 printf("INORDEM: ");
                 imprime_inordem(arv);
-                printf("\n")
+                printf("\n");
                 system("pause");
             }
+        }
+        else if(op == 3){
+
+        }
+        else if(op == 4){
+            int teste = teste_arvore(arv);
+            if(teste)
+                printf("ARVORE BINARIA DE BUSCA\n");
+            else
+                printf("NAO ARVORE BINARIA DE BUSCA\n");
+            system("pause");
+        }
+        else if(op == 5){
+
+        }
+        else if(op == 6){
+            if(eh_completa(arv))
+                printf("EH ARVORE COMPLETA\n");
+            else
+                printf("NAO EH ARVORE COMPLETA\n");
+            system("pause");
         }
     }
     arv_libera(arv);
